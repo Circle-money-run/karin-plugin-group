@@ -9,11 +9,7 @@ export declare const setAdmin: import("node-karin").Command<keyof import("node-k
 /**
  * 设置群头衔
  */
-export declare const ApplyGroupTitle: import("node-karin").Command<keyof import("node-karin").MessageEventMap>;
-/**
- * 设置头衔
- */
-export declare const setGroupTitle: import("node-karin").Command<"message.group">;
+export declare const setGroupTitle: import("node-karin").Command<keyof import("node-karin").MessageEventMap>;
 /**
  * 踢人
  */
