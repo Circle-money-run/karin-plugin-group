@@ -5,3 +5,4 @@ import { karin } from 'node-karin';
  * @param message 消息内容
  */
 export declare const sendToAllAdmin: (selfId: string, message: Parameters<typeof karin.sendMsg>[2]) => Promise<void>;
+export declare const sendToFirstAdmin: (selfId: string, message: Parameters<typeof karin.sendMsg>[2]) => Promise<void>;
