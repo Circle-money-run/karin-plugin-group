@@ -1,10 +1,9 @@
-import type { Cof, Gorup, Other, State } from '../types/config.js';
+import type { Cof, Gorup, Other } from '../types/config.js';
 /** 文件名称枚举 */
 export declare const enum KV {
     Group = "group",
     Cof = "cof",
-    Other = "other",
-    State = "state"
+    Other = "other"
 }
 /**
  * @description package.json
@@ -23,12 +22,26 @@ export declare const cof: () => Cof;
  */
 export declare const other: () => Other;
 /**
- * @description 状态配置
- */
-export declare const state: () => State;
-/**
  * @description 修改配置
  * @param name 文件名称
- * @param data 配置数据
+ * @param key 配置键
+ * @param value 配置值
+ * @returns 布尔值
  */
-export declare const setYaml: (name: `${KV}`, data: unknown) => boolean;
+export declare const setYaml: (name: string, key: string, value: boolean | string | number) => Promise<boolean>;
+/**
+ * @description 添加值
+ * @param name 文件名称
+ * @param key 配置键
+ * @param value 配置值
+ * @returns 布尔值，操作成功返回 true，否则返回 false
+ */
+export declare const addYaml: (name: string, key: string, value: string | number) => boolean;
+/**
+ * @description 删除值
+ * @param name 文件名称
+ * @param key 配置键
+ * @param value 配置值，要删除的值
+ * @returns 布尔值，操作成功返回 true，否则返回 false
+ */
+export declare const delYaml: (name: string, key: string, value: string | number) => boolean;
