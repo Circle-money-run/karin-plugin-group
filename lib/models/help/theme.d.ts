@@ -1,4 +1,4 @@
-declare const helpTheme: {
+export declare const helpTheme: {
     getThemeCfg(): {
         main: string;
         bg: string;
@@ -21,4 +21,3 @@ declare const helpTheme: {
         colCount: number;
     }>;
 };
-export default helpTheme;
